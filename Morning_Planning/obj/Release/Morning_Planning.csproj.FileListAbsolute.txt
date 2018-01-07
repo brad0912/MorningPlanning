@@ -1,0 +1,7 @@
+D:\緯\Project\Morning Planning\Morning_Planning\Morning_Planning\bin\Release\Morning_Planning.exe.config
+D:\緯\Project\Morning Planning\Morning_Planning\Morning_Planning\obj\Release\Morning_Planning.Form1.resources
+D:\緯\Project\Morning Planning\Morning_Planning\Morning_Planning\obj\Release\Morning_PlanningButton.MorningPlanningButton.resources
+D:\緯\Project\Morning Planning\Morning_Planning\Morning_Planning\obj\Release\Morning_Planning.Month_Select.resources
+D:\緯\Project\Morning Planning\Morning_Planning\Morning_Planning\obj\Release\Morning_Planning.Properties.Resources.resources
+D:\緯\Project\Morning Planning\Morning_Planning\Morning_Planning\obj\Release\Morning_Planning.csproj.GenerateResource.Cache
+D:\緯\Project\Morning Planning\Morning_Planning\Morning_Planning\obj\Release\Morning_Planning.MorningPlanningButton.resources

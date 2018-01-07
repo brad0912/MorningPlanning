@@ -1,0 +1,14 @@
+Morning Planning:
+	Home Page	-Complete
+	Mon Select	-Complete
+	Mon Planning	-Process
+	  1. Add project item 			- Complete
+	  2. Remove project item 		- Complete
+       	  3. Auto sort item after removed. 	- Complete
+	  4. Save the item function.		- Process
+	  5. Load the item.
+	  6. Sort load item.
+	Mon review	-Uninitial
+	Week Planning	-Uninitial
+	Week review 	-Uninitial
+	day Planning	-Uninitial
