@@ -186,6 +186,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Month_Planning";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Month_Planning";
             ((System.ComponentModel.ISupportInitialize)(this.Chart_Time)).EndInit();
             this.ResumeLayout(false);

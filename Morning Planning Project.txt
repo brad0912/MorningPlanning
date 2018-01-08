@@ -5,10 +5,10 @@ Morning Planning:
 	  1. Add project item 			- Complete
 	  2. Remove project item 		- Complete
        	  3. Auto sort item after removed. 	- Complete
-	  4. Save the item function.		- Process
-	  5. Load the item.
-	  6. Sort load item.
-	Mon review	-Uninitial
+	  4. Save the item function.		- Complete
+	  5. Load the item.			- Complete
+	  6. Sort load item.			- Complete
+	  7. Pie chart 				- Process
 	Week Planning	-Uninitial
 	Week review 	-Uninitial
 	day Planning	-Uninitial

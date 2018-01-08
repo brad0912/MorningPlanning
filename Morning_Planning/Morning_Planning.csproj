@@ -54,7 +54,7 @@
       <DependentUpon>Home_Page.cs</DependentUpon>
     </Compile>
     <Compile Include="Month_Planning.cs">
-      <SubType>Component</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Month_Planning.Designer.cs">
       <DependentUpon>Month_Planning.cs</DependentUpon>
@@ -64,6 +64,9 @@
     </Compile>
     <Compile Include="Month_Select.Designer.cs">
       <DependentUpon>Month_Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MorningPlanningButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

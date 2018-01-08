@@ -11,50 +11,7 @@ using System.Windows.Forms;
 
 namespace Morning_Planning
 {
-    public class MorningPlanningButton : Button
-    {
-        public Label label;
-        public TextBox Textbox;
-        public int index;
-        Point InitBntLocation, InitLabLocation, InitTextBoxLocation;
-        public MorningPlanningButton(){
-            label = new Label();
-            Textbox = new TextBox();
-        }
-        public void SetInitBntLocation(Point _point)
-        {
-            InitBntLocation = _point;
-        }
-        public void SetInitLabLocation(Point _point)
-        {
-            InitLabLocation = _point;
-        }
-        public void SetInitTextBoxLocation(Point _point)
-        {
-            InitTextBoxLocation = _point;
-        }
-
-        public Point GetInitBntLocation()
-        {
-            return InitBntLocation;
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            this.ResumeLayout(false);
-
-        }
-
-        public Point GetInitLabLocation()
-        {
-            return InitLabLocation;
-        }
-        public Point GetInitTextBoxLocation()
-        {
-            return InitTextBoxLocation;
-        }
-    }
+  
     public partial class Month_Planning : Form
     {
         int Cnt_MonPlan, Cnt_YearPlan;
@@ -62,6 +19,7 @@ namespace Morning_Planning
         List<MorningPlanningButton> Year_RevBnt = new List<MorningPlanningButton>();
         string[] YearProjectList = new string[1];
         string[] MonProjectList = new string[1];
+        string Mon_name;
 
         private void AddProjectItem(ref Button _button, ref List<MorningPlanningButton> _RevBnt, ref int _counter)
         {
@@ -107,6 +65,8 @@ namespace Morning_Planning
         private void button1_Click(object sender, EventArgs e)
         {
             AddProjectItem( ref button1, ref Mon_RevBnt, ref Cnt_MonPlan);
+            Mon_RevBnt[Cnt_MonPlan - 1].Textbox.TextChanged += new System.EventHandler(MonTextBox_TextChange);
+            MonTextBox_TextChange(null, null);
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -189,42 +149,27 @@ namespace Morning_Planning
             _SaveYear.YearProject_Record(YearProjectList);
         }
 
+        private void MonTextBox_TextChange(object sender, EventArgs e)
+        {
+            Array.Resize(ref MonProjectList, Cnt_MonPlan);
+            string _file_path = Mon_name + "_Project.txt"; 
+            SaveProject _SaveYear = new SaveProject(_file_path);
+
+            for (int i = 0; i < Cnt_MonPlan; i++)
+            {
+                MonProjectList[i] = (Mon_RevBnt[i].Textbox.Text);
+            }
+            _SaveYear.Project_Record(MonProjectList);
+        }
+
         public Month_Planning(string _month)
         {
             InitializeComponent();
-            Cnt_MonPlan = 0;
-            Cnt_YearPlan = 0;
-            Mon_RevBnt.Add(new MorningPlanningButton());
-            Year_RevBnt.Add(new MorningPlanningButton());
 
-            MorningPlanningButton InitialMbnt = new MorningPlanningButton();
-            MorningPlanningButton Mbnt = new MorningPlanningButton();
-            InitialMbnt.label = label4;
-            InitialMbnt.Textbox = textBox2;
-            CopyObjectProperties(ref Mbnt, InitialMbnt);
-            Mon_RevBnt[0].index = 0;
-            Mon_RevBnt[0] = Mbnt;
-            Mon_RevBnt[0].SetInitBntLocation(button1.Location);
-            Mon_RevBnt[0].SetInitLabLocation(label4.Location);
-            Mon_RevBnt[0].SetInitTextBoxLocation(textBox2.Location);
-            this.Controls.Remove(label4);
-            this.Controls.Remove(textBox2);
-            this.Controls.Add(Mbnt.label);
-            this.Controls.Add(Mbnt.Textbox);
-
-            Year_RevBnt[0].label = label2;
-            Year_RevBnt[0].Textbox = textBox1;
-            Year_RevBnt[0].Textbox.TextChanged += new System.EventHandler(YearTextBox_TextChange);
-            Year_RevBnt[0].Textbox.TextChanged += (YearTextBox_TextChange);
-            Year_RevBnt[0].index = 0;
-            Year_RevBnt[0].SetInitBntLocation(button2.Location);
-            Year_RevBnt[0].SetInitLabLocation(label2.Location);
-            Year_RevBnt[0].SetInitTextBoxLocation(textBox1.Location);
-
-            Cnt_MonPlan++;
-            Cnt_YearPlan++;
             N_Month.Text = _month + " Plan";
-            YearTextBox_TextChange(null, null);
+            Mon_name = _month;
+            InitProject();
+  
         }
 
         private void CopyObjectProperties(ref MorningPlanningButton Target, MorningPlanningButton Source)
@@ -244,6 +189,64 @@ namespace Morning_Planning
             Target.Textbox.Enabled = true;
         }
 
+        private void InitProject()
+        {
+            Cnt_MonPlan = 0;
+            Cnt_YearPlan = 0;
+            Mon_RevBnt.Add(new MorningPlanningButton());
+            Year_RevBnt.Add(new MorningPlanningButton());
+
+            MorningPlanningButton InitialMbnt = new MorningPlanningButton();
+            MorningPlanningButton Mbnt = new MorningPlanningButton();
+            InitialMbnt.label = label4;
+            InitialMbnt.Textbox = textBox2;
+            CopyObjectProperties(ref Mbnt, InitialMbnt);
+            Mon_RevBnt[0].index = 0;
+            Mon_RevBnt[0] = Mbnt;
+            Mon_RevBnt[0].SetInitBntLocation(button1.Location);
+            Mon_RevBnt[0].SetInitLabLocation(label4.Location);
+            Mon_RevBnt[0].SetInitTextBoxLocation(textBox2.Location);
+            Mon_RevBnt[0].Textbox.TextChanged += new System.EventHandler(MonTextBox_TextChange);
+            this.Controls.Remove(label4);
+            this.Controls.Remove(textBox2);
+            this.Controls.Add(Mbnt.label);
+            this.Controls.Add(Mbnt.Textbox);
+
+            Year_RevBnt[0].label = label2;
+            Year_RevBnt[0].Textbox = textBox1;
+            Year_RevBnt[0].Textbox.TextChanged += new System.EventHandler(YearTextBox_TextChange);
+            Year_RevBnt[0].index = 0;
+            Year_RevBnt[0].SetInitBntLocation(button2.Location);
+            Year_RevBnt[0].SetInitLabLocation(label2.Location);
+            Year_RevBnt[0].SetInitTextBoxLocation(textBox1.Location);
+
+            Cnt_MonPlan++;
+            Cnt_YearPlan++;
+
+            //Read Year txt
+            SaveProject _SaveProject = new SaveProject();
+            string[] str = _SaveProject.Read_YearProject();
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (i > Cnt_YearPlan - 1)
+                    button2_Click(null, null);
+
+                Year_RevBnt[i].Textbox.Text = str[i];              
+            }
+
+            //Read Mon txt
+            string _file_path = Mon_name + "_Project.txt";
+            _SaveProject = new SaveProject(_file_path);
+            str = _SaveProject.Read_Project();
+            for(int i = 0; i<str.Length; i++)
+            {
+                if (i > Cnt_MonPlan - 1)
+                    button1_Click(null, null);
+
+                Mon_RevBnt[i].Textbox.Text = str[i];
+            }
+            
+        }
     }
     
 }
