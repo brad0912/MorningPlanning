@@ -41,28 +41,25 @@ namespace Morning_Planning
                 _PrePage.Close();          
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            _PrePage.Visible = true;
-            close_PrePage = false;
-            this.Close();
-        }
-
         public void Get_PrePage(object sender)
         {
             _PrePage = (Form1)sender;
         }
 
-        private void January_Click(object sender, EventArgs e)
+        private void Month_Click(object sender, EventArgs e)
         {
-            Month_Planning _JanuaryPlan = new Month_Planning("January");
+            Button _bnt = (Button)sender;
+            Month_Planning _MonPlan = new Month_Planning(_bnt.Text);
+            _MonPlan.Get_PrePage(this);
             this.Visible = false;
-            _JanuaryPlan.ShowDialog();
+            _MonPlan.ShowDialog();
         }
 
-        private void June_Click(object sender, EventArgs e)
+        private void Pre_Click(object sender, EventArgs e)
         {
-
+            _PrePage.Visible = true;
+            close_PrePage = false;
+            this.Close();
         }
     }
 }

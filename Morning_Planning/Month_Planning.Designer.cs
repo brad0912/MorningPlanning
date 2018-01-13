@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.N_Month = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -41,6 +41,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Bnt_WeekPlan = new System.Windows.Forms.Button();
+            this.Bnt_Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_Time)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,19 +113,19 @@
             // 
             this.Chart_Time.BorderlineColor = System.Drawing.Color.Silver;
             this.Chart_Time.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea1.Name = "ChartArea1";
-            this.Chart_Time.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.Chart_Time.Legends.Add(legend1);
-            this.Chart_Time.Location = new System.Drawing.Point(278, 177);
+            chartArea2.Name = "ChartArea1";
+            this.Chart_Time.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.Chart_Time.Legends.Add(legend2);
+            this.Chart_Time.Location = new System.Drawing.Point(278, 196);
             this.Chart_Time.Name = "Chart_Time";
             this.Chart_Time.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Life log";
-            this.Chart_Time.Series.Add(series1);
-            this.Chart_Time.Size = new System.Drawing.Size(274, 300);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "PlanningSeries";
+            this.Chart_Time.Series.Add(series2);
+            this.Chart_Time.Size = new System.Drawing.Size(274, 219);
             this.Chart_Time.TabIndex = 7;
             this.Chart_Time.Text = "chart1";
             // 
@@ -165,9 +167,37 @@
             // 
             this.groupBox1.Location = new System.Drawing.Point(263, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 483);
+            this.groupBox1.Size = new System.Drawing.Size(297, 425);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
+            // 
+            // Bnt_WeekPlan
+            // 
+            this.Bnt_WeekPlan.BackColor = System.Drawing.Color.IndianRed;
+            this.Bnt_WeekPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bnt_WeekPlan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.Bnt_WeekPlan.ForeColor = System.Drawing.Color.White;
+            this.Bnt_WeekPlan.Location = new System.Drawing.Point(398, 445);
+            this.Bnt_WeekPlan.Name = "Bnt_WeekPlan";
+            this.Bnt_WeekPlan.Size = new System.Drawing.Size(138, 31);
+            this.Bnt_WeekPlan.TabIndex = 13;
+            this.Bnt_WeekPlan.Text = "Week Plan";
+            this.Bnt_WeekPlan.UseVisualStyleBackColor = false;
+            this.Bnt_WeekPlan.Click += new System.EventHandler(this.Bnt_WeekPlan_Click);
+            // 
+            // Bnt_Back
+            // 
+            this.Bnt_Back.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Bnt_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bnt_Back.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.Bnt_Back.ForeColor = System.Drawing.Color.White;
+            this.Bnt_Back.Location = new System.Drawing.Point(27, 445);
+            this.Bnt_Back.Name = "Bnt_Back";
+            this.Bnt_Back.Size = new System.Drawing.Size(138, 31);
+            this.Bnt_Back.TabIndex = 14;
+            this.Bnt_Back.Text = "Back";
+            this.Bnt_Back.UseVisualStyleBackColor = false;
+            this.Bnt_Back.Click += new System.EventHandler(this.Bnt_Back_Click);
             // 
             // Month_Planning
             // 
@@ -175,6 +205,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(560, 488);
+            this.Controls.Add(this.Bnt_Back);
+            this.Controls.Add(this.Bnt_WeekPlan);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Chart_Time);
             this.Controls.Add(this.label2);
@@ -205,5 +237,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Bnt_WeekPlan;
+        private System.Windows.Forms.Button Bnt_Back;
     }
 }

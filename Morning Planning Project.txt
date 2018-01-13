@@ -1,14 +1,21 @@
 Morning Planning:
 	Home Page	-Complete
+
 	Mon Select	-Complete
-	Mon Planning	-Process
+
+	Mon Planning	-Hold
 	  1. Add project item 			- Complete
 	  2. Remove project item 		- Complete
        	  3. Auto sort item after removed. 	- Complete
 	  4. Save the item function.		- Complete
 	  5. Load the item.			- Complete
 	  6. Sort load item.			- Complete
-	  7. Pie chart 				- Process
-	Week Planning	-Uninitial
+	  7. Pie chart 				- Hold untile day planning finish
+	
+	Week Planning	-Process
+	  1. Design Week Planning Form		- Process
+	  2. other				- Uninitial
+	
 	Week review 	-Uninitial
+	
 	day Planning	-Uninitial

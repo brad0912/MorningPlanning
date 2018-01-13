@@ -47,7 +47,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.DarkGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F);
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(215, 515);
             this.button1.Name = "button1";
@@ -55,7 +55,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Pre Page";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Pre_Click);
             // 
             // January
             // 
@@ -69,7 +69,7 @@
             this.January.TabIndex = 1;
             this.January.Text = "January";
             this.January.UseVisualStyleBackColor = false;
-            this.January.Click += new System.EventHandler(this.January_Click);
+            this.January.Click += new System.EventHandler(this.Month_Click);
             // 
             // February
             // 
@@ -82,6 +82,7 @@
             this.February.TabIndex = 2;
             this.February.Text = "February";
             this.February.UseVisualStyleBackColor = false;
+            this.February.Click += new System.EventHandler(this.Month_Click);
             // 
             // March
             // 
@@ -94,6 +95,7 @@
             this.March.TabIndex = 3;
             this.March.Text = "March";
             this.March.UseVisualStyleBackColor = false;
+            this.March.Click += new System.EventHandler(this.Month_Click);
             // 
             // April
             // 
@@ -106,6 +108,7 @@
             this.April.TabIndex = 4;
             this.April.Text = "April";
             this.April.UseVisualStyleBackColor = false;
+            this.April.Click += new System.EventHandler(this.Month_Click);
             // 
             // May
             // 
@@ -118,6 +121,7 @@
             this.May.TabIndex = 5;
             this.May.Text = "May";
             this.May.UseVisualStyleBackColor = false;
+            this.May.Click += new System.EventHandler(this.Month_Click);
             // 
             // June
             // 
@@ -130,7 +134,7 @@
             this.June.TabIndex = 6;
             this.June.Text = "June";
             this.June.UseVisualStyleBackColor = false;
-            this.June.Click += new System.EventHandler(this.June_Click);
+            this.June.Click += new System.EventHandler(this.Month_Click);
             // 
             // July
             // 
@@ -143,6 +147,7 @@
             this.July.TabIndex = 7;
             this.July.Text = "July";
             this.July.UseVisualStyleBackColor = false;
+            this.July.Click += new System.EventHandler(this.Month_Click);
             // 
             // August
             // 
@@ -155,6 +160,7 @@
             this.August.TabIndex = 8;
             this.August.Text = "August";
             this.August.UseVisualStyleBackColor = false;
+            this.August.Click += new System.EventHandler(this.Month_Click);
             // 
             // September
             // 
@@ -167,6 +173,7 @@
             this.September.TabIndex = 9;
             this.September.Text = "September";
             this.September.UseVisualStyleBackColor = false;
+            this.September.Click += new System.EventHandler(this.Month_Click);
             // 
             // October
             // 
@@ -179,6 +186,7 @@
             this.October.TabIndex = 10;
             this.October.Text = "October";
             this.October.UseVisualStyleBackColor = false;
+            this.October.Click += new System.EventHandler(this.Month_Click);
             // 
             // November
             // 
@@ -191,6 +199,7 @@
             this.November.TabIndex = 11;
             this.November.Text = "November";
             this.November.UseVisualStyleBackColor = false;
+            this.November.Click += new System.EventHandler(this.Month_Click);
             // 
             // December
             // 
@@ -203,6 +212,7 @@
             this.December.TabIndex = 12;
             this.December.Text = "December";
             this.December.UseVisualStyleBackColor = false;
+            this.December.Click += new System.EventHandler(this.Month_Click);
             // 
             // Month_Select
             // 

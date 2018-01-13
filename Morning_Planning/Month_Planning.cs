@@ -20,6 +20,7 @@ namespace Morning_Planning
         string[] YearProjectList = new string[1];
         string[] MonProjectList = new string[1];
         string Mon_name;
+        Month_Select _PrePage;
 
         private void AddProjectItem(ref Button _button, ref List<MorningPlanningButton> _RevBnt, ref int _counter)
         {
@@ -245,7 +246,33 @@ namespace Morning_Planning
 
                 Mon_RevBnt[i].Textbox.Text = str[i];
             }
-            
+
+            //Initial Pie Chart
+            MorningPlanningPieChartInit();
+        }
+
+        private void MorningPlanningPieChartInit()
+        {
+            Chart_Time.Legends[0].Title = "Previous Month Planning Analysis";
+            Chart_Time.Series["PlanningSeries"].Points.AddXY("Test1", 50);
+            Chart_Time.Series["PlanningSeries"].Points.AddXY("Test2", 50);
+        }
+
+        private void Bnt_Back_Click(object sender, EventArgs e)
+        {
+            _PrePage.Visible = true;
+            this.Close();
+        }
+
+        private void Bnt_WeekPlan_Click(object sender, EventArgs e)
+        {
+            //Invisable MorningPlanning Form
+            //Show WeekPlanning Form
+        }
+
+        public void Get_PrePage(object sender)
+        {
+            _PrePage = (Month_Select)sender;
         }
     }
     
