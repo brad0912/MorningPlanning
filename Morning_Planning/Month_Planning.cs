@@ -263,11 +263,13 @@ namespace Morning_Planning
             _PrePage.Visible = true;
             this.Close();
         }
-
+        WeekAndDayPlanning _WeekAndDayPlan = new WeekAndDayPlanning();
         private void Bnt_WeekPlan_Click(object sender, EventArgs e)
         {
             //Invisable MorningPlanning Form
+            this.Visible = false;
             //Show WeekPlanning Form
+            _WeekAndDayPlan.ShowDialog();
         }
 
         public void Get_PrePage(object sender)

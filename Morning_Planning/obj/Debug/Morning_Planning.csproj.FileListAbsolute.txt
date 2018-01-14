@@ -20,3 +20,4 @@ D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Month
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Properties.Resources.resources
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.csproj.GenerateResource.Cache
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Month_Planning.resources
+D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.WeekAndDayPlanning.resources

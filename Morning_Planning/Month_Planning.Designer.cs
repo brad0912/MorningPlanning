@@ -50,7 +50,7 @@
             // 
             this.N_Month.AutoSize = true;
             this.N_Month.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.N_Month.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.N_Month.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.N_Month.Location = new System.Drawing.Point(37, 20);
             this.N_Month.Name = "N_Month";
             this.N_Month.Size = new System.Drawing.Size(115, 22);
@@ -61,7 +61,7 @@
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Arial", 12F);
-            this.label4.ForeColor = System.Drawing.Color.Olive;
+            this.label4.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.label4.Location = new System.Drawing.Point(24, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 18);
@@ -73,7 +73,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.Olive;
+            this.textBox2.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.textBox2.Location = new System.Drawing.Point(61, 58);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(94, 19);
@@ -83,7 +83,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
