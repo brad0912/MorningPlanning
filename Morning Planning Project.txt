@@ -14,6 +14,7 @@ Morning Planning:
 	
 	Week Planning	-Process
 	  1. Design Week Planning Form		- Process
+	     (Reference Collect UI - ToDoList page 2, item 1)
 	  2. other				- Uninitial
 	
 	Week review 	-Uninitial

@@ -46,8 +46,7 @@ namespace Morning_Planning
             _RevBnt[_counter].Textbox.ForeColor = _RevBnt[_counter - 1].Textbox.ForeColor;
             _RevBnt[_counter].Textbox.Text = "Project";
             _RevBnt[_counter].Textbox.BorderStyle = _RevBnt[_counter - 1].Textbox.BorderStyle;
-            _RevBnt[_counter].Textbox.Enabled = true;
-            
+            _RevBnt[_counter].Textbox.Enabled = true;    
             this.Controls.Add(_RevBnt[_counter].Textbox);
             
             //Add remove button. 
@@ -69,6 +68,7 @@ namespace Morning_Planning
             Mon_RevBnt[Cnt_MonPlan - 1].Textbox.TextChanged += new System.EventHandler(MonTextBox_TextChange);
             MonTextBox_TextChange(null, null);
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             AddProjectItem(ref button2,ref Year_RevBnt, ref Cnt_YearPlan);
@@ -104,7 +104,7 @@ namespace Morning_Planning
                 if (_mBnt[i].label.Location != new Point(_mBnt[i].GetInitLabLocation().X, _mBnt[i].GetInitLabLocation().Y + (25 * i)))
                 {
                     _mBnt[i].label.Location = new Point (_mBnt[i].GetInitLabLocation().X, _mBnt[i].GetInitLabLocation().Y + (25 * i));
-            _mBnt[i].Textbox.Location = new Point(_mBnt[0].GetInitTextBoxLocation().X, _mBnt[0].GetInitTextBoxLocation().Y + (25 * i));
+                    _mBnt[i].Textbox.Location = new Point(_mBnt[0].GetInitTextBoxLocation().X, _mBnt[0].GetInitTextBoxLocation().Y + (25 * i));
                     if(i < _mBnt.Count -1)
                         _mBnt[i].Location = new Point(_mBnt[0].GetInitBntLocation().X, _mBnt[0].GetInitBntLocation().Y + (25 * i));
                     _mBnt[i].label.Text = (i+1).ToString() + '.';
@@ -154,13 +154,13 @@ namespace Morning_Planning
         {
             Array.Resize(ref MonProjectList, Cnt_MonPlan);
             string _file_path = Mon_name + "_Project.txt"; 
-            SaveProject _SaveYear = new SaveProject(_file_path);
+            SaveProject _SaveMon = new SaveProject(_file_path);
 
             for (int i = 0; i < Cnt_MonPlan; i++)
             {
                 MonProjectList[i] = (Mon_RevBnt[i].Textbox.Text);
             }
-            _SaveYear.Project_Record(MonProjectList);
+            _SaveMon.Project_Record(MonProjectList);
         }
 
         public Month_Planning(string _month)
@@ -169,8 +169,7 @@ namespace Morning_Planning
 
             N_Month.Text = _month + " Plan";
             Mon_name = _month;
-            InitProject();
-  
+            InitProject(); 
         }
 
         private void CopyObjectProperties(ref MorningPlanningButton Target, MorningPlanningButton Source)
@@ -263,12 +262,13 @@ namespace Morning_Planning
             _PrePage.Visible = true;
             this.Close();
         }
-        WeekAndDayPlanning _WeekAndDayPlan = new WeekAndDayPlanning();
+        WeeklyPlanning _WeekAndDayPlan;
         private void Bnt_WeekPlan_Click(object sender, EventArgs e)
         {
             //Invisable MorningPlanning Form
             this.Visible = false;
             //Show WeekPlanning Form
+            _WeekAndDayPlan = new WeeklyPlanning(Mon_name);
             _WeekAndDayPlan.ShowDialog();
         }
 
