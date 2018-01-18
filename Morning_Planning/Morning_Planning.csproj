@@ -69,6 +69,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="WeeklyProjectItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveProject.cs" />
     <Compile Include="WeeklyPlanning.cs">

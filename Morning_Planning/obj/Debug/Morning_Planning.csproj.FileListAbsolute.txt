@@ -14,10 +14,10 @@ D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.exe
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.pdb
 D:\緯\Project\MorningPlanning\Morning_Planning\bin\Debug\Morning_Planning.exe
 D:\緯\Project\MorningPlanning\Morning_Planning\bin\Debug\Morning_Planning.pdb
-D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.csprojResolveAssemblyReference.cache
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Form1.resources
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Month_Select.resources
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Properties.Resources.resources
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.csproj.GenerateResource.Cache
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Month_Planning.resources
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.WeeklyPlanning.resources
+D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.csprojResolveAssemblyReference.cache
