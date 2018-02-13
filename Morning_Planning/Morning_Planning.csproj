@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DayPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayPlanning.Designer.cs">
+      <DependentUpon>DayPlanning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home_Page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="WeeklyPlanning.Designer.cs">
       <DependentUpon>WeeklyPlanning.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DayPlanning.resx">
+      <DependentUpon>DayPlanning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home_Page.resx">
       <DependentUpon>Home_Page.cs</DependentUpon>
     </EmbeddedResource>

@@ -41,7 +41,7 @@ namespace Morning_Planning
                 _PrePage.Close();          
         }
 
-        public void Get_PrePage(object sender)
+        public void Set_PrePage(object sender)
         {
             _PrePage = (Form1)sender;
         }
@@ -50,7 +50,7 @@ namespace Morning_Planning
         {
             Button _bnt = (Button)sender;
             Month_Planning _MonPlan = new Month_Planning(_bnt.Text);
-            _MonPlan.Get_PrePage(this);
+            _MonPlan.Set_PrePage(this);
             this.Visible = false;
             _MonPlan.ShowDialog();
         }

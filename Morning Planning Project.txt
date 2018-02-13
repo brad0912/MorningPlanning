@@ -14,11 +14,14 @@ Morning Planning:
 	
 	Week Planning	-Process
 	  1. Design Week Planning Form		- Complete
-	  2. other				- Process
+		1-1.Design next and back button.
+	  2. other				- Complete
   		2-1. Add Weekly Plann function	- Complete
-		2-2. Save Weekly Plann function	- Process
+		2-2. Save Weekly Plann function	- Complete
 		(Need to save checkbox status, not only save project context.)
 	
 	Week review 	-Uninitial
 	
-	day Planning	-Uninitial
+	day Planning	-Process
+	  1. Design UI
+		

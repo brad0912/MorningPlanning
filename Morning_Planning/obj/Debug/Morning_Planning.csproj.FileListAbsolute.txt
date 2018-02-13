@@ -21,3 +21,4 @@ D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.cspro
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.Month_Planning.resources
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.WeeklyPlanning.resources
 D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.csprojResolveAssemblyReference.cache
+D:\緯\Project\MorningPlanning\Morning_Planning\obj\Debug\Morning_Planning.DayPlanning.resources

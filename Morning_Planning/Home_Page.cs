@@ -35,7 +35,7 @@ namespace Morning_Planning
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            _Month_Select.Get_PrePage(this);
+            _Month_Select.Set_PrePage(this);
             _Month_Select.ShowDialog();
         }
     }

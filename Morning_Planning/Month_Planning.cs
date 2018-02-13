@@ -269,10 +269,11 @@ namespace Morning_Planning
             this.Visible = false;
             //Show WeekPlanning Form
             _WeekAndDayPlan = new WeeklyPlanning(Mon_name);
+            _WeekAndDayPlan.Set_PrePage(this);
             _WeekAndDayPlan.ShowDialog();
         }
 
-        public void Get_PrePage(object sender)
+        public void Set_PrePage(object sender)
         {
             _PrePage = (Month_Select)sender;
         }
