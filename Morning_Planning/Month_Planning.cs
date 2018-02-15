@@ -20,6 +20,7 @@ namespace Morning_Planning
         string[] YearProjectList = new string[1];
         string[] MonProjectList = new string[1];
         string Mon_name;
+        public bool close_PrePage;
         Month_Select _PrePage;
 
         private void AddProjectItem(ref Button _button, ref List<MorningPlanningButton> _RevBnt, ref int _counter)
@@ -169,6 +170,7 @@ namespace Morning_Planning
 
             N_Month.Text = _month + " Plan";
             Mon_name = _month;
+            close_PrePage = true;
             InitProject(); 
         }
 
@@ -260,6 +262,7 @@ namespace Morning_Planning
         private void Bnt_Back_Click(object sender, EventArgs e)
         {
             _PrePage.Visible = true;
+            close_PrePage = false;
             this.Close();
         }
         WeeklyPlanning _WeekAndDayPlan;
@@ -276,6 +279,19 @@ namespace Morning_Planning
         public void Set_PrePage(object sender)
         {
             _PrePage = (Month_Select)sender;
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            if (close_PrePage)
+            {
+                _PrePage.close_PrePage = true;
+                _PrePage.Close();
+            }
+
         }
     }
     

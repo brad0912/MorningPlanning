@@ -40,7 +40,7 @@
             // 
             this.label_WeeklyPlan.AutoSize = true;
             this.label_WeeklyPlan.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label_WeeklyPlan.ForeColor = System.Drawing.Color.Black;
+            this.label_WeeklyPlan.ForeColor = System.Drawing.Color.DarkGreen;
             this.label_WeeklyPlan.Location = new System.Drawing.Point(79, 9);
             this.label_WeeklyPlan.Name = "label_WeeklyPlan";
             this.label_WeeklyPlan.Size = new System.Drawing.Size(168, 22);
@@ -49,7 +49,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -65,6 +65,7 @@
             // 
             this.CheckBox_WeekProject.AutoSize = true;
             this.CheckBox_WeekProject.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.CheckBox_WeekProject.ForeColor = System.Drawing.Color.Black;
             this.CheckBox_WeekProject.Location = new System.Drawing.Point(108, 46);
             this.CheckBox_WeekProject.Name = "CheckBox_WeekProject";
             this.CheckBox_WeekProject.Size = new System.Drawing.Size(15, 14);
@@ -76,11 +77,13 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial", 12F);
+            this.textBox1.ForeColor = System.Drawing.Color.DarkGreen;
             this.textBox1.Location = new System.Drawing.Point(129, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.Size = new System.Drawing.Size(186, 19);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "Project";
+            this.textBox1.TextChanged += new System.EventHandler(this.ProjectTextBox_Changed);
             // 
             // button2
             // 

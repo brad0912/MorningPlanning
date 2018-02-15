@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.N_Month = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -76,7 +76,7 @@
             this.textBox2.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.textBox2.Location = new System.Drawing.Point(61, 58);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(94, 19);
+            this.textBox2.Size = new System.Drawing.Size(152, 19);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Project";
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -87,7 +87,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(161, 57);
+            this.button1.Location = new System.Drawing.Point(219, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 23);
             this.button1.TabIndex = 5;
@@ -101,7 +101,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(465, 59);
+            this.button2.Location = new System.Drawing.Point(522, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 23);
             this.button2.TabIndex = 11;
@@ -113,18 +113,18 @@
             // 
             this.Chart_Time.BorderlineColor = System.Drawing.Color.Silver;
             this.Chart_Time.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea2.Name = "ChartArea1";
-            this.Chart_Time.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.Chart_Time.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.Chart_Time.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Chart_Time.Legends.Add(legend1);
             this.Chart_Time.Location = new System.Drawing.Point(278, 196);
             this.Chart_Time.Name = "Chart_Time";
             this.Chart_Time.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "PlanningSeries";
-            this.Chart_Time.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "PlanningSeries";
+            this.Chart_Time.Series.Add(series1);
             this.Chart_Time.Size = new System.Drawing.Size(274, 219);
             this.Chart_Time.TabIndex = 7;
             this.Chart_Time.Text = "chart1";
@@ -147,7 +147,7 @@
             this.textBox1.ForeColor = System.Drawing.Color.Maroon;
             this.textBox1.Location = new System.Drawing.Point(365, 58);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(94, 19);
+            this.textBox1.Size = new System.Drawing.Size(151, 19);
             this.textBox1.TabIndex = 9;
             this.textBox1.Text = "Project";
             // 

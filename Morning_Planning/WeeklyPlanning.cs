@@ -16,7 +16,7 @@ namespace Morning_Planning
         List<string> Str_WeeklyProjtect = new List<string>();
         string _file_name;
         int Object_distance;
-        bool close_PrePage;
+        public bool close_PrePage;
         string _month;
         Month_Planning PrePage;
         public WeeklyPlanning(string month)
@@ -35,9 +35,7 @@ namespace Morning_Planning
             SaveProject _Save = new SaveProject(_file_name);
             string[] str = _Save.Read_Project();
 
-            int _strLen= 0;
-            str.GetLength(_strLen);
-            if (_strLen == 0)
+            if (str.Length == 0)
             {
                 CBList_WeeklyProject[0].Get_TextkBox().Text = "Project";
                 Str_WeeklyProjtect.Add("Project");
@@ -130,6 +128,7 @@ namespace Morning_Planning
         {
             Target.Location = new Point(Source.Location.X, Source.Location.Y);
             Target.Font = Source.Font;
+            Target.Size = Source.Size;
             Target.ForeColor = Source.ForeColor;
             Target.BorderStyle = Source.BorderStyle;
             Target.Text = Source.Text;
@@ -174,8 +173,9 @@ namespace Morning_Planning
             base.OnFormClosing(e);
 
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
-            if (close_PrePage)
+            if (close_PrePage)         
                 PrePage.Close();
+
         }
     }
 }

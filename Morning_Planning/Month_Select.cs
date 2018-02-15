@@ -13,7 +13,7 @@ namespace Morning_Planning
     public partial class Month_Select : Form
     {
         Form1 _PrePage;
-        bool close_PrePage = false;
+        public bool close_PrePage = false;
         public Month_Select()
         {
             InitializeComponent();

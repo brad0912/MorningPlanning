@@ -16,20 +16,52 @@ namespace Morning_Planning
         List<string> Str_TodayProjtect = new List<string>();
         int Object_distance;
         string _file_name;
+        bool close_PrePage;
         WeeklyPlanning PrePage;
 
         public DayPlanning(string month)
         {
             InitializeComponent();
-            String Date = DateTime.Now.ToString("dd");
-           this._file_name = month + "//"+Date + ".txt";
-
+            close_PrePage = true;
             CBList_TodayProject.Add(new WeeklyProjectItem());
             CBList_TodayProject[0].Set_CheckBox(CheckBox_TodayProject);
             CBList_TodayProject[0].Set_TextBox(textBox1);
             Object_distance = CheckBox_TodayProject.Location.X - textBox1.Location.X;
             CBList_TodayProject[0].Get_TextkBox().TextChanged += ProjectTextBox_Changed;
             CBList_TodayProject[0].Get_TextkBox().KeyDown += ProjectKeyDown_Enter;
+            String Date = DateTime.Now.ToString("dd");
+           this._file_name = month + "//"+Date + ".txt";
+            SaveProject _Save = new SaveProject(_file_name);
+            string[] str = _Save.Read_Project();
+
+            if (str.Length == 0)
+            {
+                CBList_TodayProject[0].Get_TextkBox().Text = "Project";
+                Str_TodayProjtect.Add("Project");
+                Str_TodayProjtect.Add("Unchecked");
+            }
+            else
+            {
+                CBList_TodayProject[0].Get_TextkBox().Text = str[0];
+                if (string.Compare("Checked", str[1], true) == 0)
+                    CBList_TodayProject[0].Get_CheckBox().Checked = true;
+                else
+                    CBList_TodayProject[0].Get_CheckBox().Checked = false;
+                Str_TodayProjtect.Add(str[0]);
+                Str_TodayProjtect.Add(str[1]);
+            }
+
+            for (int i = 2; i < str.Length; i = i + 2)
+            {
+                Str_TodayProjtect.Add(str[i]);
+                Str_TodayProjtect.Add(str[i + 1]);
+                Add_ObjectItem();
+                CBList_TodayProject[CBList_TodayProject.Count - 1].Get_TextkBox().Text = str[i];
+                if (string.Compare("Checked", str[i + 1], true) == 0)
+                    CBList_TodayProject[CBList_TodayProject.Count - 1].Get_CheckBox().Checked = true;
+                else
+                    CBList_TodayProject[CBList_TodayProject.Count - 1].Get_CheckBox().Checked = false;
+            }
         }
 
         private void ProjectTextBox_Changed(object sender, EventArgs e)
@@ -77,6 +109,7 @@ namespace Morning_Planning
         private void CopyItemProtries(ref TextBox Target, TextBox Source)
         {
             Target.Location = new Point(Source.Location.X, Source.Location.Y);
+            Target.Size = Source.Size;
             Target.Font = Source.Font;
             Target.ForeColor = Source.ForeColor;
             Target.BorderStyle = Source.BorderStyle;
@@ -111,6 +144,25 @@ namespace Morning_Planning
         public void Set_PrePage(object sender)
         {
             PrePage = (WeeklyPlanning)sender;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PrePage.Visible = true;
+            close_PrePage = false;
+            this.Close();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            if (close_PrePage)
+            {
+                PrePage.close_PrePage = true;
+                PrePage.Close();
+            }
         }
     }
 }

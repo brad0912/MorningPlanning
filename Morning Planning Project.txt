@@ -20,8 +20,8 @@ Morning Planning:
 		2-2. Save Weekly Plann function	- Complete
 		(Need to save checkbox status, not only save project context.)
 	
+	day Planning	-Complete	
+
 	Week review 	-Uninitial
-	
-	day Planning	-Process
-	  1. Design UI
-		
+
+	Day review 	-Uninitial
